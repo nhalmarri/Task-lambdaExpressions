@@ -2,10 +2,13 @@ package com.example.tasklambdaexpressions.controller;
 
 
 import com.example.tasklambdaexpressions.bo.CreateSuggestionRequest;
+import com.example.tasklambdaexpressions.entity.GuestSuggestionEntity;
 import com.example.tasklambdaexpressions.repository.GuestSuggestionRepository;
 import com.example.tasklambdaexpressions.service.GuestSuggestionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/api")
@@ -29,7 +32,18 @@ public class SuggestionController {
 
         guestSuggestionService.printAndProcessSuggestion(guestSuggestionService.toString());
 
-
     }
+
+
+
+
+
+
+
+
+
+
+
+
 
 }//end of class

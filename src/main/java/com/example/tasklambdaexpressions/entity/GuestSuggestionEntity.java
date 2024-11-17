@@ -1,9 +1,6 @@
 package com.example.tasklambdaexpressions.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
 public class GuestSuggestionEntity {
@@ -13,6 +10,12 @@ public class GuestSuggestionEntity {
     private Long id;
     private int rate;
     private String suggestionText;
+
+    @Enumerated(EnumType.STRING)
+
+    //double check the value for column !!!
+    @Column(name = "SuggestionStatus")
+    private SuggestionStatus suggestionStatus;
 
 
 
@@ -38,6 +41,14 @@ public class GuestSuggestionEntity {
 
     public void setSuggestionText(String suggestionText) {
         this.suggestionText = suggestionText;
+    }
+
+    public SuggestionStatus getSuggestionStatus() {
+        return suggestionStatus;
+    }
+
+    public void setSuggestionStatus(SuggestionStatus suggestionStatus) {
+        this.suggestionStatus = suggestionStatus;
     }
 
 }//end of class

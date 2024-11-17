@@ -1,13 +1,17 @@
 package com.example.tasklambdaexpressions.bo;
 
+import com.example.tasklambdaexpressions.entity.SuggestionStatus;
+
 public class CreateSuggestionRequest {
 
     private int rate;
     private String suggestionText;
+    private SuggestionStatus status;
 
-    public CreateSuggestionRequest(int rate, String suggestionText) {
+    public CreateSuggestionRequest(int rate, String suggestionText, SuggestionStatus status) {
         this.rate = rate;
         this.suggestionText = suggestionText;
+        this.status = status;
     }
 
     public int getRate() {
@@ -25,4 +29,15 @@ public class CreateSuggestionRequest {
     public void setSuggestionText(String suggestionText) {
         this.suggestionText = suggestionText;
     }
+
+    public SuggestionStatus getStatus() {
+        return status;
+    }
+
+    public void setStatus(SuggestionStatus status) {
+        this.status = status;
+    }
+
+
+
 }//end of class
